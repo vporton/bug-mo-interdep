@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "interdep_backend": {
+      "main": "src/interdep_backend/main.mo",
+      "type": "motoko"
+    },
+    "interdep_frontend": {
+      "dependencies": [
+        "interdep_backend"
+      ],
+      "source": [
+        "src/interdep_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "interdep_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
